@@ -1,0 +1,10 @@
+{ 
+  "name": "Application Monitoring for UN FAO ",
+  "description" : "Monitoring",
+  "author" : "Bryan Berry",
+  "twitter" : "@bryanwb",
+  "templates" : {
+    "default" : "style_guide.tpl"
+  },
+  "section" : "presentation"
+}
