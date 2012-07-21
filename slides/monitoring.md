@@ -178,16 +178,122 @@ events.<br /><br /> Would be nice to scrape metrics from logs though.</center>
 * Watch out though, don't use quotes, the 1st example here works, the
   second doesn't
 <br />
-<div style="font-size:2em;">status_code:40* AND request_header_host:*fao_org</div>
+<div style="font-size:2em;"><em>> status_code:40* AND request_header_host:*fao_org</em></div>
 <br />
 <br />
-<div  style="font-size:2em;">status_code:"40*" AND request_header_host:"*fao_org"</div>
+<div  style="font-size:2em;"><em>> status_code:"40*" AND request_header_host:"*fao_org"</em></div>
 
 !SLIDE
-# Listen
+# But this is not really enough
 
-Be sure to listen to the FoodFightShow!
+<br />
+<br />
+<center style="font-size:4em;"> Ideally, your application should be
+instrumented from the inside
+<br />
+<br />
+No one knows your code better than you
+</center>
 
-![Food Fight Show](images/foodfight_banner.png)
+!SLIDE
+# Use the Force, Luke
+
+<br />
+<br />
+<img style="float:right;" src="image/images/luke_skywalker.jpg"></img>
+<br />
+<br />
+<center style="font-size:4em;">Use Statsd</center>
+
+.notes http://www.alexandgregory.com/images/luke%20skywalker.jpg
+
+!SLIDE
+# Show me a graphic     
+
+![Statsd](images/statsd.svg)
+
+!SLIDE
+# Enter Statsd
+
+* a small local daemon that your application send metrics to over UDP     
+* I use [Pete Fritchman's Ruby implementation](https://github.com/fetep/ruby-statsd)
+* Statsd ships the metrics it receives to graphite
+* Types of metrics
+  * gauges
+  * timers
+  * counters
+
+!SLIDE
+# So about the code
+
+
+<center style="font-size:2em;">Here is some sample java code</center>
+
+![java-client](images/java-client.png)
+
+!SLIDE
+# Metrics, Metrics Everywhere
+
+<img src="images/metrics-hat-full.png"  height="300px"
+width="250px" style="float:right;"></img>
+Coda Hale gave an [excellent talk](http://pivotallabs.com/talks/139-metrics-metrics-everywhere) about how his team at yammer
+uses metrics
+<br /><br />
+He also created an excellent [java library](http://metrics.codahale.com/) that you can use together
+with statsd
+
+!SLIDE
+# Now, Graphite Demo
+
+<img src="images/graphite-graph-example.png"  height="500px"
+width="800px" ></img>
+
+.notes show how to display request_duration across multiple sub_domains
+
+!SLIDE
+
+# You will get for free
+
+* System-level monitoring with collectd
+* JMX monitoring w/ JMXtrans
+* log aggregation on request via logstash+elasticsearch+kibana
+* All those data points in graphite
+
+<br />
+<center style="font-size:4em;">But if you are serious about
+performance . . .</center>
+
+!SLIDE
+# . . . You will
+
+<img src="images/serious_cat.jpg" style="float:right;"></img>
+
+* instrument your code with the statsd java client or Coda
+  Hale's metrics library
+* Create custom graphs in graphite
+* Solve performance problems the way real engineers do, with _data_
+
+!SLIDE
+# Questions?
+
+<center style="font-size:4em;">Ask away</center>
+
+!SLIDE
+# Here is what the full monitoring stack looks like
+
+!SLIDE
+# Further Resources
+
+* [Logstash](http://logstash.net)
+* [Collectd](http://collectd.org)
+* [statsd](https://github.com/etsy/statsd) and Pete Fritchman's [ruby-statsd](https://github.com/fetep/ruby-statsd)
+* [graphite](http://graphite.wikidot.org)
+* Coda Hale's [excellent talk](http://pivotallabs.com/talks/139-metrics-metrics-everywhere)
+and library [java library](http://metrics.codahale.com/)
+* Be sure to listen to the FoodFightShow! 
+   * [Monitoring for n00bs](http://traffic.libsyn.com/foodfight/ffs21_3.mp3)
+   * [Monitoringsucks](http://traffic.libsyn.com/foodfight/ffs18_3.mp3)  
+
+<img src="images/foodfight_banner.png" width="287px" height="110px"></img>
 
 
