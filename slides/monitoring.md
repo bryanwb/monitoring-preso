@@ -279,7 +279,9 @@ performance . . .</center>
 <center style="font-size:4em;">Ask away</center>
 
 !SLIDE
-# Here is what the full monitoring stack looks like
+# The Full Stack
+
+![Full stack](images/full_stack.svg)
 
 !SLIDE
 # Further Resources
@@ -294,6 +296,6 @@ and library [java library](http://metrics.codahale.com/)
    * [Monitoring for n00bs](http://traffic.libsyn.com/foodfight/ffs21_3.mp3)
    * [Monitoringsucks](http://traffic.libsyn.com/foodfight/ffs18_3.mp3)  
 
-<img src="images/foodfight_banner.png" width="287px" height="110px"></img>
+<img src="images/foodfight_banner.png" width="500px" height="210px"></img>
 
 
