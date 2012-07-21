@@ -1,152 +1,66 @@
 !SLIDE
-# Graph ALL THE THINGS
+# A New Hope
 
 
 <br />
 <br />
 <br />
-<center style="font-size:6em;">Monitoring <br />data.fao.org</center>
+<center style="font-size:6em;">
+Monitoring <br />data.fao.org<br /><br />
+
+<img src="images/anewhope.png"></img>
+</center>
+
+.notes http://www.ironicsans.com/images/anewhope.png
+
+!SLIDE
+# Overview
+
+* What we have now
+* Why it sucks
+* What might be better
+* What you can do
 
 
 !SLIDE
-# We have got a complicated application stack
+# We have a complicated application stack
 
-<center style="font-size:6em;">systematic monitoring is critical</center>
+<center style="font-size:4em;">systematic monitoring is critical to
+untangling it</center><br />
 
 
 <center><img src="images/spaghetti-bolognese.jpg" height="400px" width="600px" /></center>
+
+.notes http://dummyatcooking.files.wordpress.com/2007/10/spaghetti-bolognese.jpg
                                          
 !SLIDE
 # We currently use Nagios and RHQ
 
-<img src="images/monitoring.svg" />
+<center><img src="images/monitoring.svg" /></center>
 
 !SLIDE
 # Downsides of current approach
 
-CAM<font style="font-size:2em;">S</font>
-
-<br />
-the S in CAMS stands for Sharing
-
-* Share your story
-* Share your problems
-* Share your solutions
-
-!SLIDE
-# Don't be afraid of Meatspace
-
-* Attend the big conference
-* Join the local Meetup groups
-* Traveling? Offer to speak at the local geek meetup
-
-<center><img src="images/globe_chef.jpg" width="150px" height="200px" /></center>
-
-
-!SLIDE
-# No local meetups? #
-
-* Start one
-  * convince your boss
-  * register a twitter handle
-  * sign-up on Meetup.com
-
-.notes http://nathenharvey.com/blog/2011/12/13/tips-for-hosting-a-tech-user-group/
-
-!SLIDE
-# The Ugly Truth
-
-It's Easy to get LEFT BEHIND
-
-<center><img src="images/chef-car.gif" /></center>
-
-!SLIDE
-# No Assholes!
-
-<center><img src="images/ramsay.jpg" height="400px" width="600px" /> </center>
-
-.notes http://cdn.blogs.sheknows.com/realitytvmagazine.sheknows.com/2009/09/hells-kitchen-season-6-chef-ramsay-lets-his-displeasure-be-known.jpg
-
-!SLIDE 
-# Poisonous People Kill Fun Dead
-
-![Bad Apple](images/no_fun.jpg)
-
-.notes http://www.herbcompanion.com/uploadedImages/Blogs/Contributors/dog.jpg
-
-!SLIDE
-# No Assholes but...
-
-* We need to be more than just
-
-![Meh](images/meh.jpg)
-
-.notes http://robsigrist.edublogs.org/files/2011/08/Scary-Green-Apple-by-Tina-Collins-1mdjz0w.jpg
-
-!SLIDE
-# Welcome new contributors!
-
-* 3,000 lines of ruby?
-  * Swallow the horror
-  * Help make it awesome
-
-!SLIDE
-# Be Nice
-<center><img src="images/jesserobbins.jpg" height="150" width="150" />
-<img src="images/red-heart.png" height="100" width="100" />
-<img src="images/adam.jpg"  height="150" width="150" /></center>
-<br />
-<center style="font-size:4em;">Jesse and Adam are nice</center>
-<center style="font-size:4em;">So We Are Too</center>
 <br />
 <br />
-<center style="font-size:4em;">JASWAT! or . . .</center>
-!SLIDE
-# Hug Driven Development
-
-![lusis](images/adamhjk_lusis.jpg)
+* Graphing capabilities in Nagios+Cacti very limited
+* Nagios is a pain to configure, even with Chef
+* RHQ is powerful but very inflexible
 
 !SLIDE
-# Submit patches
+# More RHQ issues
 
-Even little changes are appreciated!
+* The RHQ agent consumes non-trivial amount of RAM and CPU
+* Extending it requires you to write Java class and a Maven pom.xml (The Horror!)
+* Small user community despite being a relatively mature project
+* No easy way to access data in RHQ to create dashboards or do
+ computations on data
 
-![simple pull request](images/pull_requests.jpg)
+<img src="images/the-scream.jpg" height="400px" width="300px"></img>
 
-!SLIDE
-# Food Fight Show
+.notes http://3.bp.blogspot.com/-RAPTS9vZKKw/TZB8Zf7HSpI/AAAAAAAAEmA/5uSAjc4xfsc/s1600/the-scream.jpg
 
-* "bi-weekly" podcast for the Chef and DevOps  community
-* Tools, tips, process, and culture
-* What's Cookin' - All the latest in Cookbook News
 
-!SLIDE
-# Food Fight Show episodes
-
-* Etsy Examined
-* TESTALLTHETHINGS
-* Back to the Kernel with Greg Kroah-Hartman
-* ...and 14 more!
-
-!SLIDE
-# Food Fight Show
-
-* Featuring **YOU**!
-
-![@fnichol](images/fnichol_tweet.jpg)
-
-!SLIDE
-# Make your Cookbooks more awesome
-
-* Link to github
-* Include CHANGELOG.md
-* Add tests!
-
-!SLIDE
-# Contribute
-
-* http://github.com/foodfight
-* Patches welcome!
 
 !SLIDE
 # Listen
