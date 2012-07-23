@@ -14,6 +14,24 @@ Monitoring <br />data.fao.org<br /><br />
 .notes http://www.ironicsans.com/images/anewhope.png
 
 !SLIDE
+# Ohai!
+
+I am Bryan W. Berry
+
+* I am in charge of infrastructure operations for [http://data.fao.org](http://data.fao.org), you probably already knew this
+<br />
+<br />
+<center>What does that mean?</center>
+<br />
+<br />
+* Provision new servers
+* Automate everything possible
+* Handle backups
+* Also, responsible for monitoring
+<br/>
+You can reach me at bryan.berry@fao.org
+
+!SLIDE
 # Overview
 
 * What we have now
@@ -136,7 +154,7 @@ stats.haproxy.data_fao_org.request_duration   330 74857843</center>
 <img style="float:right;" src="image/images/logstash.png"></img>
 
 <center  style="font-size:3em;">We don't only care about metrics, we also care about important
-events.<br /><br /> Would be nice to scrape metrics from logs though.</center>
+events<br /><br /> Scraping metrics from logs would be nice</center>
 
 !SLIDE
 # Show me the graphic already!
@@ -152,7 +170,7 @@ events.<br /><br /> Would be nice to scrape metrics from logs though.</center>
   * add new fields and tags to entries
   * Elasticsearch backend is awwwes0me
 
-* Con - The agent isn't so light on resource usage
+* Con - The agent is not light on resource usage
 
 !SLIDE
 # Logs don't have to be Ugly
@@ -216,6 +234,7 @@ No one knows your code better than you
 # Enter Statsd
 
 * a small local daemon that your application send metrics to over UDP     
+* has virtually no overhead
 * I use [Pete Fritchman's Ruby implementation](https://github.com/fetep/ruby-statsd)
 * Statsd ships the metrics it receives to graphite
 * Types of metrics
