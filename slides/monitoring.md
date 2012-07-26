@@ -6,7 +6,7 @@
 <br />
 <br />
 <center style="font-size:6em;">
-Monitoring <br />data.fao.org<br /><br />
+Monitoring <br />kewlapp.example.org<br /><br />
 
 <img src="images/anewhope.png"></img>
 </center>
@@ -18,7 +18,7 @@ Monitoring <br />data.fao.org<br /><br />
 
 I am Bryan W. Berry
 
-* I am in charge of infrastructure operations for [http://data.fao.org](http://data.fao.org), you probably already knew this
+* I am in charge of infrastructure operations for [http://kewlapp.example.org](http://kewlapp.example.org)
 <br />
 <br />
 <center style="font-size:4em;">What does that mean?</center>
@@ -29,7 +29,7 @@ I am Bryan W. Berry
 * Handle backups
 * Also, responsible for monitoring
 <br/>
-You can reach me at bryan.berry@fao.org
+You can reach me at [bryan.berry@gmail.com](mailto:bryan.berry@gmail.com) or [@bryanwb](https://twitter.com/#!/bryanwb)
 
 !SLIDE
 # Overview
@@ -103,7 +103,7 @@ width="400px"></img></center>
 <br />
 
 <center  style="font-size:2em;">
-stats.haproxy.data_fao_org.request_duration  <span style="color:blue;">330</span>  74857843</center>
+stats.haproxy.app_example_org.request_duration  <span style="color:blue;">330</span>  74857843</center>
 <br />
 <br />
 <center style="font-size:2em;">
@@ -157,10 +157,10 @@ stats.haproxy.data_fao_org.request_duration  <span style="color:blue;">330</span
 !SLIDE
 # What about those logs?
 
-<img style="float:right;" src="image/images/logstash.png"></img>
+<img style="float:right;" width="304px" height="486px" src="file/images/logstash.png"></img>
 
-<center  style="font-size:3em;">We don't only care about metrics, we also care about important
-events<br /><br /> Scraping metrics from logs would be nice</center>
+<span  style="font-size:3em;">We don't only care about metrics,<br /> we also care about important
+events<br /><br /> Scraping metrics from logs <br /> would be nice</span>
 
 !SLIDE
 # Show me the graphic already!
@@ -202,10 +202,10 @@ events<br /><br /> Scraping metrics from logs would be nice</center>
 * Watch out though, don't use quotes, the 1st example here works, the
   second doesn't
 <br />
-<div style="font-size:2em;"><em>> status_code:40* AND request_header_host:*fao_org</em></div>
+<div style="font-size:2em;"><em>> status_code:40* AND request_header_host:*example_org</em></div>
 <br />
 <br />
-<div  style="font-size:2em;"><em>> status_code:"40*" AND request_header_host:"*fao_org"</em></div>
+<div  style="font-size:2em;"><em>> status_code:"40*" AND request_header_host:"*example_org"</em></div>
 
 !SLIDE
 # But this is not really enough
@@ -224,7 +224,7 @@ No one knows your code better than you
 
 <br />
 <br />
-<img style="float:right;" src="image/images/luke_skywalker.jpg"></img>
+<img style="float:right;" src="file/images/luke_skywalker.jpg"></img>
 <br />
 <br />
 <center style="font-size:4em;">Use Statsd</center>
@@ -322,5 +322,18 @@ and library [java library](http://metrics.codahale.com/)
    * [Monitoringsucks](http://traffic.libsyn.com/foodfight/ffs18_3.mp3)  
 
 <img src="images/foodfight_banner.png" width="500px" height="210px"></img>
+<br />
+But wait, there's more!
 
+!SLIDE
+# Build it yourself
 
+With the help of these cookbooks:  
+
+* [chef-jmxtrans](https://github.com/bryanwb/chef-jmxtrans)
+* [chef-graphite](https://github.com/bryanwb/chef-graphite)
+* [chef-logstash](https://github.com/bryanwb/chef-logstash)
+* [chef-logstash](https://github.com/bryanwb/chef-logstash)
+* [chef-ruby-statsd](https://github.com/bryanwb/chef-ruby-statsd)
+* [chef-collectd](https://github.com/bryanwb/chef-collectd)
+* [cookbook-elasticsearch](https://github.com/karmi/cookbook-elasticsearch)
