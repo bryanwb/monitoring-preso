@@ -21,7 +21,7 @@ I am Bryan W. Berry
 * I am in charge of infrastructure operations for [http://data.fao.org](http://data.fao.org), you probably already knew this
 <br />
 <br />
-<center>What does that mean?</center>
+<center style="font-size:4em;">What does that mean?</center>
 <br />
 <br />
 * Provision new servers
@@ -103,7 +103,13 @@ width="400px"></img></center>
 <br />
 
 <center  style="font-size:2em;">
-stats.haproxy.data_fao_org.request_duration   330 74857843</center>
+stats.haproxy.data_fao_org.request_duration  <span style="color:blue;">330</span>  74857843</center>
+<br />
+<br />
+<center style="font-size:2em;">
+&lt;stat_name&gt; &lt;number&gt; &lt;timestamp&gt; 
+</center>
+<br />
 
 <br />
 
