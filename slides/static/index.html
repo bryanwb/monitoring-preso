@@ -1,0 +1,553 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title></title>
+
+  <meta name="viewport" content="width=device-width"/>
+
+  <link rel="stylesheet" href="./css/reset.css" type="text/css"/>
+  <link rel="stylesheet" href="./css/showoff.css" type="text/css"/>
+
+  <script type="text/javascript" src="./js/jquery-1.4.2.min.js"></script>
+  <script type="text/javascript" src="./js/jquery.cycle.all.js"></script>
+	<script type="text/javascript" src="./js/jquery-print.js"></script>
+  <script type="text/javascript" src="./js/jquery.batchImageLoad.js"></script>
+
+  <script type="text/javascript" src="./js/jquery.doubletap-0.1.js"></script>
+
+  <script type="text/javascript" src="./js/fg.menu.js"></script>
+  <script type="text/javascript" src="./js/showoff.js"></script>
+  <script type="text/javascript" src="./js/jTypeWriter.js"> </script>
+  <script type="text/javascript" src="./js/sh_main.min.js"></script>
+  <script type="text/javascript" src="./js/core.js"></script>
+  <script type="text/javascript" src="./js/showoffcore.js"></script>
+  <script type="text/javascript" src="./js/coffee-script.js"></script>
+
+  <link type="text/css" href="./css/fg.menu.css" media="screen" rel="stylesheet" />
+  <link type="text/css" href="./css/theme/ui.all.css" media="screen" rel="stylesheet" />
+  <link type="text/css" href="./css/sh_style.css" rel="stylesheet" >
+
+  
+    <link rel="stylesheet" href="file/base.css" type="text/css"/>
+  
+    <link rel="stylesheet" href="file/fonts.css" type="text/css"/>
+  
+
+  
+    <script type="text/javascript" src="file/shrink.js"></script>
+  
+
+  <script type="text/javascript">
+  $(function(){
+      setupPreso(false, './');
+  });
+  </script>
+
+</head>
+
+<body>
+
+<a tabindex="0" href="#search-engines" class="fg-button fg-button-icon-right ui-widget ui-state-default ui-corner-all" id="navmenu"><span class="ui-icon ui-icon-triangle-1-s"></span>slides</a>
+<div id="navigation" class="hidden"></div>
+
+<div id="help">
+  <table>
+    <tr><td class="key">z, ?</td><td>toggle help (this)</td></tr>
+    <tr><td class="key">space, &rarr;</td><td>next slide</td></tr>
+    <tr><td class="key">shift-space, &larr;</td><td>previous slide</td></tr>
+    <tr><td class="key">d</td><td>toggle debug mode</td></tr>
+    <tr><td class="key">## &lt;ret&gt;</td><td>go to slide #</td></tr>
+    <tr><td class="key">c, t</td><td>table of contents (vi)</td></tr>
+    <tr><td class="key">f</td><td>toggle footer</td></tr>
+    <tr><td class="key">r</td><td>reload slides</td></tr>
+    <tr><td class="key">n</td><td>toggle notes</td></tr>
+    <tr><td class="key">p</td><td>run preshow</td></tr>
+  </table>
+</div>
+
+<div class="buttonNav">
+  <input type="submit" onClick="prevStep();" value="prev"/>
+  <input type="submit" onClick="nextStep();" value="next"/>
+</div>
+
+<div id="preso">loading presentation...</div>
+<div id="footer">
+  <span id="slideInfo"></span>
+  <span id="debugInfo"></span>
+  <span id="notesInfo"></span>
+</div>
+
+<div id="slides" class="offscreen" style="display:none;">
+<div class="slide" data-transition="none"><div class="content" ref="./monitoring/1">
+<h1>A New Hope</h1>
+
+<br/>
+
+
+<br/>
+
+
+<br/>
+
+
+<center style="font-size:6em;">
+Monitoring <br/>data.fao.org<br/><br/>
+
+<img src="./file/./images/anewhope.png" width="450" height="661"/>
+</center>
+
+
+<p class="notes">http://www.ironicsans.com/images/anewhope.png</p></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="./monitoring/2">
+<h1>Ohai!</h1>
+
+<p>I am Bryan W. Berry</p>
+
+<ul>
+<li>I am in charge of infrastructure operations for <a href="http://data.fao.org">http://data.fao.org</a>, you probably already knew this</li>
+</ul>
+
+
+<br/>
+
+
+<br/>
+
+
+<center style="font-size:4em;">What does that mean?</center>
+
+
+<br/>
+
+
+<br/>
+
+
+<ul>
+<li>Provision new servers</li>
+<li>Automate everything possible</li>
+<li>Handle backups</li>
+<li>Also, responsible for monitoring</li>
+</ul>
+
+
+<br/>
+
+
+<p>You can reach me at bryan.berry@fao.org</p></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="./monitoring/3">
+<h1>Overview</h1>
+
+<ul>
+<li>What we have now</li>
+<li>Why it sucks</li>
+<li>What might be better</li>
+<li>What you can do</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="./monitoring/4">
+<h1>We have a complicated application stack</h1>
+
+<center style="font-size:4em;">systematic monitoring is critical to
+untangling it</center>
+
+
+<br/>
+
+
+
+
+<center><img src="./file/./images/spaghetti-bolognese.jpg" width="750" height="562" height="400px" width="600px"/></center>
+
+
+<p class="notes">http://dummyatcooking.files.wordpress.com/2007/10/spaghetti-bolognese.jpg</p></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="./monitoring/5">
+<h1>We currently use Nagios and RHQ</h1>
+
+<center><img src="./file/./images/monitoring.svg"/></center>
+
+
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="./monitoring/6">
+<h1>Downsides</h1>
+
+<br/>
+
+
+<br/>
+
+
+<ul>
+<li>Graphing capabilities in Nagios+Cacti very limited</li>
+<li>Nagios is a pain to configure, even with Chef</li>
+<li>RHQ is powerful but very inflexible</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="./monitoring/7">
+<h1>More RHQ Issues</h1>
+
+<br/>
+
+
+<br/>
+
+
+<ul>
+<li>The RHQ agent consumes non-trivial amount of RAM and CPU</li>
+<li>Extending it requires you to write Java class and a Maven pom.xml</li>
+<li>Small user community despite being a relatively mature project</li>
+<li>No easy way to access data in RHQ to create dashboards <br/> or do computations on data</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="./monitoring/8">
+<h1>That Makes me Want to...</h1>
+
+<center><img src="./file/./images/the-scream.jpg" width="400" height="510" height="600px" width="400px"/></center>
+
+
+<p class="notes">http://3.bp.blogspot.com/-RAPTS9vZKKw/TZB8Zf7HSpI/AAAAAAAAEmA/5uSAjc4xfsc/s1600/the-scream.jpg</p></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="./monitoring/9">
+<h1>A New Hope</h1>
+
+<ul>
+<li>A more flexible monitoring system</li>
+<li>We will continue to use Nagios for alerting</li>
+<li>The future use of RHQ is uncertain</li>
+</ul>
+
+
+<br/>
+
+
+<br/>
+
+
+<center style="font-size:3em;">The DevOps Community has (mostly) converged on a toolchain for monitoring</center>
+
+
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="./monitoring/10">
+<h1>What is a metric?</h1>
+
+<ul>
+<li>a name</li>
+<li>a value</li>
+<li>a timestamp, typically the UNIX epoch time</li>
+</ul>
+
+
+<br/>
+
+
+
+
+<center style="font-size:2em;">
+stats.haproxy.data_fao_org.request_duration  <span style="color:blue;">330</span>  74857843</center>
+
+
+<br/>
+
+
+<br/>
+
+
+<center style="font-size:2em;">
+&lt;stat_name&gt; &lt;number&gt; &lt;timestamp&gt; 
+</center>
+
+
+<br/>
+
+
+
+
+<br/>
+
+
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="./monitoring/11">
+<h1>Collectd for system metrics</h1>
+
+<center>
+<img src="./file/./images/collectd-monitoring.svg"/>
+</center>
+
+
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="./monitoring/12">
+<h1>Collectd is good</h1>
+
+<ul>
+<li>lightweight C daemon</li>
+<li>monitors continuously, not once every 5 minutes</li>
+<li>Best for OS-level metrics such as CPU, Disk, Memory, etc.</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="./monitoring/13">
+<h1>What's Graphite?</h1>
+
+<ul>
+<li>Time Series Database (Whisper)</li>
+<li>Rendering Engine</li>
+<li>Dashboard (Graphite-Web)</li>
+<li>data relay and aggregation (Carbon)</li>
+</ul>
+
+
+<br/>
+
+
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="./monitoring/14">
+<h1>Here is a taste</h1>
+
+<br/>
+
+
+<center><img src="./file/./images/graphite-demo.png" width="1366" height="768"/></center>
+
+
+
+
+<center style="font-size:4em;">We'll come back to this later!</center>
+
+
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="./monitoring/15">
+<h1>Let's take a look at that JVM</h1>
+
+<p><img src="./file/./images/jmxtrans.svg"/></p></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="./monitoring/16">
+<h1>JMXTrans</h1>
+
+<ul>
+<li>Is just a connector for transporting JMX data</li>
+<li>No agent involved</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="./monitoring/17">
+<h1>What about those logs?</h1>
+
+<p><img style="float:right;" src="image/images/logstash.png"/></p>
+
+<center style="font-size:3em;">We don't only care about metrics, we also care about important
+events<br/><br/> Scraping metrics from logs would be nice</center>
+
+
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="./monitoring/18">
+<h1>Show me the graphic already!</h1>
+
+<p><img src="./file/./images/logstash.svg" alt="logstash"/></p></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="./monitoring/19">
+<h1>Logstash can more than just ship logs</h1>
+
+<ul>
+<li><p>Win</p>
+
+<ul>
+<li>index by field</li>
+<li>shape data</li>
+<li>add new fields and tags to entries</li>
+<li>Elasticsearch backend is awwwes0me</li>
+</ul>
+</li>
+<li><p>Con - The agent is not light on resource usage</p></li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="./monitoring/20">
+<h1>Logs don't have to be Ugly</h1>
+
+<p><img src="./file/./images/basic-kibana.png" width="1366" height="768" alt="logstash"/></p></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="./monitoring/21">
+<h1>We can filter the data</h1>
+
+<p><img src="./file/./images/kibana-select-fields.png" width="1366" height="768" alt="logstash"/></p></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="./monitoring/22">
+<h1>UNIX Tail in your browser</h1>
+
+<p><img src="./file/./images/kibana-tail.png" width="1366" height="768" alt="logstash"/></p></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="./monitoring/23">
+<h1>Elasticsearch Rocks</h1>
+
+<ul>
+<li>We can use <a href="https://lucene.apache.org/core/old_versioned_docs/versions/3_5_0/queryparsersyntax.html">Lucene Parser
+Syntax</a>
+to construct queries</li>
+<li>Watch out though, don't use quotes, the 1st example here works, the
+second doesn't</li>
+</ul>
+
+
+<br/>
+
+
+<div style="font-size:2em;"><em>&gt; status_code:40* AND request_header_host:*fao_org</em></div>
+
+
+<br/>
+
+
+<br/>
+
+
+<div style="font-size:2em;"><em>&gt; status_code:"40*" AND request_header_host:"*fao_org"</em></div>
+
+
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="./monitoring/24">
+<h1>But this is not really enough</h1>
+
+<br/>
+
+
+<br/>
+
+
+<center style="font-size:4em;"> Ideally, your application should be
+instrumented from the inside
+<br/>
+<br/>
+No one knows your code better than you
+</center>
+
+
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="./monitoring/25">
+<h1>Use the Force, Luke</h1>
+
+<br/>
+
+
+<br/>
+
+
+<p><img style="float:right;" src="image/images/luke_skywalker.jpg"/></p>
+
+<br/>
+
+
+<br/>
+
+
+<center style="font-size:4em;">Use Statsd</center>
+
+
+<p class="notes">http://www.alexandgregory.com/images/luke%20skywalker.jpg</p></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="./monitoring/26">
+<h1>Show me a graphic</h1>
+
+<p><img src="./file/./images/statsd.svg" alt="Statsd"/></p></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="./monitoring/27">
+<h1>Enter Statsd</h1>
+
+<ul>
+<li>a small local daemon that your application send metrics to over UDP</li>
+<li>has virtually no overhead</li>
+<li>I use <a href="https://github.com/fetep/ruby-statsd">Pete Fritchman's Ruby implementation</a></li>
+<li>Statsd ships the metrics it receives to graphite</li>
+<li>Types of metrics
+
+<ul>
+<li>gauges</li>
+<li>timers</li>
+<li>counters</li>
+</ul>
+</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="./monitoring/28">
+<h1>So about the code</h1>
+
+<center style="font-size:2em;">Here is some sample java code</center>
+
+
+<p><img src="./file/./images/java-client.png" width="904" height="332" alt="java-client"/></p></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="./monitoring/29">
+<h1>Metrics, Metrics Everywhere</h1>
+
+<p><img src="./file/./images/metrics-hat-full.png" width="515" height="515" height="300px" width="250px" style="float:right;"/>
+Coda Hale gave an <a href="http://pivotallabs.com/talks/139-metrics-metrics-everywhere">excellent talk</a> about how his team at yammer
+uses metrics</p>
+
+<br/><br/>
+
+
+<p>He also created an excellent <a href="http://metrics.codahale.com/">java library</a> that you can use together
+with statsd</p></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="./monitoring/30">
+<h1>Now, Graphite Demo</h1>
+
+<p><img src="./file/./images/graphite-graph-example.png" width="1359" height="513" height="500px" width="800px"/></p>
+
+<p class="notes">show how to display request<em>duration across multiple sub</em>domains</p></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="./monitoring/31">
+<h1>You will get for free</h1>
+
+<ul>
+<li>System-level monitoring with collectd</li>
+<li>JMX monitoring w/ JMXtrans</li>
+<li>log aggregation on request via logstash+elasticsearch+kibana</li>
+<li>All those data points in graphite</li>
+</ul>
+
+
+<br/>
+
+
+<center style="font-size:4em;">But if you are serious about
+performance . . .</center>
+
+
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="./monitoring/32">
+<h1>. . . You will</h1>
+
+<p><img src="./file/./images/serious_cat.jpg" width="425" height="345" style="float:right;"/></p>
+
+<ul>
+<li>instrument your code with the statsd java client or Coda
+Hale's metrics library</li>
+<li>Create custom graphs in graphite</li>
+<li>Solve performance problems the way real engineers do, with <em>data</em></li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="./monitoring/33">
+<h1>Questions?</h1>
+
+<center style="font-size:4em;">Ask away</center>
+
+
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="./monitoring/34">
+<h1>The Full Stack</h1>
+
+<p><img src="./file/./images/full_stack.svg" alt="Full stack"/></p></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="./monitoring/35">
+<h1>Further Resources</h1>
+
+<ul>
+<li><a href="http://logstash.net">Logstash</a></li>
+<li><a href="http://collectd.org">Collectd</a></li>
+<li><a href="https://github.com/etsy/statsd">statsd</a> and Pete Fritchman's <a href="https://github.com/fetep/ruby-statsd">ruby-statsd</a></li>
+<li><a href="http://graphite.wikidot.org">graphite</a></li>
+<li>Coda Hale's <a href="http://pivotallabs.com/talks/139-metrics-metrics-everywhere">excellent talk</a>
+and library <a href="http://metrics.codahale.com/">java library</a></li>
+<li>Be sure to listen to the FoodFightShow!
+
+<ul>
+<li><a href="http://traffic.libsyn.com/foodfight/ffs21_3.mp3">Monitoring for n00bs</a></li>
+<li><a href="http://traffic.libsyn.com/foodfight/ffs18_3.mp3">Monitoringsucks</a></li>
+</ul>
+</li>
+</ul>
+
+
+<p><img src="./file/./images/foodfight_banner.png" width="576" height="227" width="500px" height="210px"/></p></div>
+</div></div>
+
+</body>
+</html>
